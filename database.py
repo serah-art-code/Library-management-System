@@ -19,6 +19,14 @@ author TEXT,
 status TEXT
 )
 """)
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS issued_books(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+student_reg TEXT,
+book_title TEXT,
+issue_date TEXT
+)
+""")
 
 conn.commit()
 conn.close()
